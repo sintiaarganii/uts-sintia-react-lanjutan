@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Login = ()=>{
 
@@ -98,6 +98,19 @@ const Login = ()=>{
           <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
             Masuk
           </button>
+
+          {/* Link Registrasi */}
+          <div className="text-center mt-4 pt-4 border-t border-gray-200">
+            <p className="text-sm text-gray-600">
+              Belum punya akun?{' '}
+              <Link 
+                to="/register" 
+                className="font-semibold text-indigo-600 hover:text-indigo-700 hover:underline transition-all"
+              >
+                Daftar sekarang
+              </Link>
+            </p>
+          </div>
         </div>
 
         {/* Footer */}
